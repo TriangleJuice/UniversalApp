@@ -1,0 +1,18 @@
+<div class="u-margin">
+	<h1 class="u-margin-bottom">Async table</h1>
+	<table class="a-table a-table--primary" *ngIf="dataObservable | async as dataList else empty">
+	  <thead>
+	    <th>Id</th>
+	    <th>Date</th>
+	    <th>Text</th>
+	  </thead>
+	  <tbody>
+	    <tr *ngFor="let data of dataList">
+	      <td>{{ data.id }}</td>
+	      <td>{{ data.date }}</td>
+	      <td>{{ data.text }}</td>
+	    </tr>
+	  </tbody>
+	</table>
+	<ng-template #empty><p>No data available</p></ng-template>
+</div>
