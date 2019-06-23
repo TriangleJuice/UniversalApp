@@ -11,7 +11,7 @@ import { DataListComponent } from './data-list/data-list.component';
     DataListComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     HttpClientModule
   ],
   providers: [],
